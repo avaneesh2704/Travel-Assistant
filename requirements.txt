@@ -1,0 +1,9 @@
+neo4j==5.9.0
+openai
+pinecone-client==3.0.0
+pyvis==0.3.1
+networkx==3.1
+tqdm
+python-dotenv
+streamlit
+
