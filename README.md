@@ -5,11 +5,8 @@ This project is a sophisticated, retrieval-augmented generation (RAG) travel ass
 The application features a fully interactive web interface built with Streamlit and supports conversational memory for follow-up questions.
 
 ---
-### **Project Status**
 
-**Note:** The application is fully coded but its final execution is currently blocked by an external `openai.RateLimitError: insufficient_quota`. This indicates an issue with the OpenAI account's billing status that could not be resolved in time. However, all underlying architecture, local data processing (Neo4j), and code are complete and robust.
 
----
 ### **Architecture**
 
 The system follows a three-stage process to answer user queries:
@@ -48,15 +45,15 @@ NEO4J_PASSWORD="password"
 
 Create and activate a Python virtual environment:
 python -m venv .venv
-# Windows
+####  Windows 
 .venv\Scripts\activate
-# macOS/Linux
+####  macOS/Linux
 source .venv/bin/activate
 
-Install dependencies:
+**Install dependencies:**
 pip install -r requirements.txt
 
-
+---
 #### **3. Start Services**
 Make sure Docker Desktop is running.
 
@@ -64,12 +61,16 @@ Start the Neo4j database container:
 
 docker run --rm -d -p 7687:7687 -p 7474:7474 --name neo4j-belabs -e NEO4J_AUTH=neo4j/password neo4j:5-community
 
-How to Run
+---
+#### **4. How to Run**
 Load Neo4j Data:
+
 python -m src.load_to_neo4j
 
 Upload Pinecone Data (Requires a working OpenAI API key):
 python -m src.pinecone_upload
 
-Launch the Web App:
+---
+#### **5. Launch the Web App:**
 streamlit run app.py
+
