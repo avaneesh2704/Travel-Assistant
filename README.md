@@ -1,4 +1,4 @@
-# Hybrid AI Travel Assistant ✈️
+#  AI Travel Assistant 
 
 This project is a sophisticated, retrieval-augmented generation (RAG) travel assistant for Vietnam. It leverages a hybrid approach, combining semantic search from a Pinecone vector database with contextual graph data from a Neo4j knowledge graph to provide intelligent, context-aware travel recommendations.
 
@@ -73,4 +73,5 @@ python -m src.pinecone_upload
 ---
 #### **5. Launch the Web App:**
 streamlit run app.py
+
 
